@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Koncept Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="title-row">
+        <img src="assets/koncept-logo.png" alt="Koncept" class="logo" />
+        <h1>Koncept Chat</h1>
+      </div>
+      <p>Chat to your personal sources like notes and documents.</p>
+      <a id="downloadBtn" class="cta" href="#" target="_blank" rel="noopener">Download v0.0.0</a>
+    </div>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>What is Koncept Chat?</h2>
+      <p>Koncept Chat uses AI to help you work faster with your personal sources like notes and documents.</p>
+    </section>
+
+    <section>
+      <p id="latestVersionText">Latest version: v0.0.0</p>
+      <h2>Latest Release</h2>
+      <p>v1.0.0-beta.1 published on January 19, 2025</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© Koncept - Ginés Sarabia</small>
+  </footer>
+  <script>
+    // Simple variables for manual updates (no manifest fetch)
+    const VERSION = '1.0.0-beta.1';
+    const DOWNLOAD_URL = `https://github.com/ginex/koncept-chat/releases/download/v${VERSION}/Koncept-Chat-Setup-${VERSION}.exe`;
+
+    // Update UI using the variables above
+    (function () {
+      window.KONCEPT_VERSION = VERSION;
+      const btn = document.getElementById('downloadBtn');
+      const versionEl = document.getElementById('latestVersionText');
+      if (versionEl) versionEl.textContent = `Latest version: v${VERSION}`;
+      if (btn) {
+        btn.textContent = `Download v${VERSION}`;
+        btn.href = DOWNLOAD_URL;
+      }
+    })();
+  </script>
+</body>
+</html>
