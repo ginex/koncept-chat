@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Koncept Chat — Aide</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="title-row">
+        <img src="assets/koncept-logo.png" alt="Koncept" class="logo" />
+        <h1>Aide</h1>
+      </div>
+      <div class="lang-switch" aria-label="Choisir la langue">
+        <a class="lang-flag" href="help.es.html" lang="es" hreflang="es" aria-label="Español" title="Español"><span>🇪🇸</span></a>
+        <a class="lang-flag active" href="help.fr.html" lang="fr" hreflang="fr" aria-label="Français" title="Français"><span>🇫🇷</span></a>
+        <a class="lang-flag" href="help.html" lang="en" hreflang="en" aria-label="English" title="English"><span>🇬🇧</span></a>
+      </div>
+      <p>Documentation du produit pour tirer le meilleur parti de Koncept Chat.</p>
+      <a class="cta" href="index.html">Retour au téléchargement</a>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="docs-layout">
+      <aside class="docs-aside">
+        <div class="docs-card">
+          <h2 class="docs-title">Dans ce guide</h2>
+          <div class="docs-muted">Conseils, bonnes pratiques et dépannage.</div>
+          <ul class="toc">
+            <li><a href="#getting-started">Bien démarrer</a></li>
+            <li><a href="#sources">Sources (Documents et Notes)</a></li>
+            <li><a href="#indexing">Indexation : comment ça marche</a></li>
+            <li><a href="#asking">Mieux demander (prompts)</a></li>
+            <li><a href="#privacy">Confidentialité et sécurité</a></li>
+            <li><a href="#shortcuts">Raccourcis</a></li>
+            <li><a href="#troubleshooting">Dépannage</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="docs-card">
+          <h2 class="docs-title">Astuce</h2>
+          <div class="callout">
+            <b>Meilleures réponses</b> = question précise + sources indexées.
+          </div>
+        </div>
+      </aside>
+
+      <div class="docs-main">
+        <section id="getting-started">
+          <h2>Bien démarrer <span class="badge">5 min</span></h2>
+          <p>Koncept Chat vous permet de discuter avec vos sources personnelles (documents et notes). Pour une meilleure expérience, commencez par <b>vous connecter</b> et <b>activer au moins une source</b>.</p>
+          <ol class="steps">
+            <li><b>Connexion</b> : cliquez sur <b>Sign in</b>, saisissez votre email puis validez le code à 6 chiffres.</li>
+            <li><b>Activer une source</b> : ouvrez <b>📄 Documents</b> ou <b>📓 Notes</b> dans l’app et connectez votre contenu.</li>
+            <li><b>Attendre l’indexation</b> : des compteurs apparaissent à côté de Documents/Notes lorsque le contenu est disponible.</li>
+            <li><b>Poser une question</b> : écrivez dans le chat et appuyez sur <span class="kbd">Enter</span>.</li>
+          </ol>
+        </section>
+
+        <section id="sources">
+          <h2>Sources (Documents et Notes)</h2>
+          <p>Koncept organise votre contenu en deux types de sources. Vous pouvez utiliser l’une, l’autre, ou les deux.</p>
+
+          <h3>📄 Documents</h3>
+          <ul>
+            <li>Connectez un ou plusieurs dossiers pour synchroniser vos documents.</li>
+            <li>Idéal pour PDF, Word, TXT, Markdown et présentations.</li>
+            <li>Bonnes pratiques : noms clairs, éviter les doublons, structure de dossiers stable.</li>
+          </ul>
+
+          <h3>📓 Notes</h3>
+          <ul>
+            <li>Créez des notes courtes et actionnables (réunions, idées, décisions, tâches).</li>
+            <li>Meilleurs résultats quand chaque note a un thème principal et des titres cohérents.</li>
+          </ul>
+
+          <div class="callout">
+            <b>Astuce :</b> si une source apparaît comme « disabled », elle n’est généralement pas active ou ne contient pas encore de contenu indexé.
+          </div>
+        </section>
+
+        <section id="indexing">
+          <h2>Indexation : comment ça marche</h2>
+          <p>Pour répondre avec du contexte, Koncept <b>extrait le texte</b> de vos sources, le <b>découpe en fragments</b> et l’envoie au backend pour construire un index de recherche sémantique.</p>
+          <ul>
+            <li><b>Fragments :</b> petites unités pour une récupération précise.</li>
+            <li><b>Compteurs :</b> indiquent combien d’éléments sont disponibles à la consultation.</li>
+            <li><b>Suppressions :</b> si vous supprimez un document local, il sera retiré de l’index au prochain cycle.</li>
+          </ul>
+          <p class="docs-muted">Si vous venez d’ajouter des documents, les réponses s’améliorent généralement à mesure que l’indexation se termine.</p>
+        </section>
+
+        <section id="asking">
+          <h2>Mieux demander (prompts)</h2>
+          <p>La qualité de la réponse dépend de la question. Ces modèles fonctionnent souvent très bien :</p>
+          <ul>
+            <li><b>Résumé structuré :</b> « Résume en 6 puces avec décisions et prochaines étapes ». </li>
+            <li><b>Extraction :</b> « Extrait les noms, dates et actions ». </li>
+            <li><b>Comparer :</b> « Compare A vs B et recommande une approche ». </li>
+            <li><b>Preuve :</b> « Cite l’extrait où X est mentionné et explique l’impact ». </li>
+          </ul>
+          <div class="callout">
+            <b>Modèle rapide :</b> « À partir de mes sources, {tâche}. Réponds au format {format}. S’il manque des infos, dis-moi quel document/note fournir. »
+          </div>
+        </section>
+
+        <section id="privacy">
+          <h2>Confidentialité et sécurité</h2>
+          <ul>
+            <li><b>Session :</b> si « Your session has expired » apparaît, reconnectez-vous.</li>
+            <li><b>Réseau d’entreprise :</b> en environnement avec inspection TLS (ex. Zscaler), l’app utilise le magasin de certificats Windows.</li>
+            <li><b>Bonne pratique :</b> évitez d’indexer des secrets inutiles ; séparez dossiers personnels et professionnels.</li>
+          </ul>
+        </section>
+
+        <section id="shortcuts">
+          <h2>Raccourcis</h2>
+          <ul>
+            <li><span class="kbd">Alt</span> + <span class="kbd">Ctrl</span> + <span class="kbd">K</span> (Windows) : afficher/masquer Koncept.</li>
+          </ul>
+        </section>
+
+        <section id="troubleshooting">
+          <h2>Dépannage</h2>
+          <h3>Problèmes de connexion / erreurs TLS</h3>
+          <ul>
+            <li>Vérifiez la connectivité/VPN et les politiques de l’entreprise.</li>
+            <li>Sur les réseaux avec inspection TLS, Koncept fait confiance aux certificats système (Windows).</li>
+          </ul>
+
+          <h3>Les documents/notes n’apparaissent pas</h3>
+          <ul>
+            <li>Attendez le cycle de synchronisation, ou rouvrez la source.</li>
+            <li>Vérifiez l’accès aux dossiers/providers (droits, antivirus).</li>
+          </ul>
+
+          <h3>Réponses faibles ou incomplètes</h3>
+          <ul>
+            <li>Confirmez que le contenu est indexé (compteurs non vides).</li>
+            <li>Ajoutez du contexte et précisez le format de sortie souhaité.</li>
+          </ul>
+        </section>
+
+        <section id="faq">
+          <h2>FAQ</h2>
+          <h3>Dois‑je activer Documents et Notes ?</h3>
+          <p>Non. Une seule source suffit. Avec les deux, la couverture de contexte est meilleure.</p>
+
+          <h3>Pourquoi je ne vois pas la dernière version d’un fichier ?</h3>
+          <p>L’indexation fonctionne par cycles. Après de gros changements, attendez un peu puis reposez la question.</p>
+
+          <h3>Puis‑je partager cette page avec mon équipe ?</h3>
+          <p>Oui. Cette page est pensée pour un onboarding rapide.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <small>© Koncept - Ginés Sarabia</small>
+  </footer>
+</body>
+</html>

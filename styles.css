@@ -11,3 +11,40 @@ h1 { margin: 8px 0; font-size: 36px; }
 .content { padding: 30px 20px; max-width: 900px; margin: 0 auto; }
 .code { background: #f7f7f7; border: 1px solid #eee; border-radius: 8px; padding: 12px; overflow-x: auto; }
 .footer { padding: 20px; text-align: center; color: #888; border-top: 1px solid #eee; }
+
+/* Docs layout (help.html) */
+.docs-layout { display: grid; grid-template-columns: 260px 1fr; gap: 22px; align-items: start; }
+.docs-aside { position: sticky; top: 18px; }
+.docs-card { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 14px; }
+.docs-card + .docs-card { margin-top: 12px; }
+.docs-title { margin: 0 0 6px 0; font-size: 14px; }
+.docs-muted { color: #666; font-size: 13px; }
+.toc { margin: 10px 0 0 0; padding: 0; list-style: none; }
+.toc li { margin: 8px 0; }
+.toc a { color: #222; text-decoration: none; font-size: 13px; }
+.toc a:hover { text-decoration: underline; }
+
+.docs-main section { margin-bottom: 26px; }
+.docs-main h2 { margin: 0 0 8px 0; font-size: 18px; }
+.docs-main h3 { margin: 14px 0 8px 0; font-size: 14px; }
+.docs-main p, .docs-main li { font-size: 13px; line-height: 1.55; color: #222; }
+.docs-main ul { margin: 8px 0 0 18px; padding: 0; }
+.badge { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; background: rgba(146,51,255,0.10); border: 1px solid rgba(146,51,255,0.25); color: #4b148e; vertical-align: middle; }
+.callout { border-left: 4px solid #9233ff; background: rgba(146,51,255,0.06); border-radius: 10px; padding: 12px 12px; }
+.callout b { color: #111; }
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 10px 0 0 0; }
+.steps li { counter-increment: step; margin: 10px 0; padding-left: 34px; position: relative; }
+.steps li::before { content: counter(step); position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 999px; background: #9233ff; color: #fff; font-weight: 700; font-size: 12px; display: inline-flex; align-items: center; justify-content: center; }
+.kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: #f7f7f7; border: 1px solid #eee; border-bottom-color: #ddd; padding: 2px 6px; border-radius: 6px; font-size: 12px; }
+
+.lang-switch { display: inline-flex; gap: 10px; align-items: center; justify-content: center; margin-top: 12px; }
+.lang-flag { display: inline-flex; width: 34px; height: 26px; align-items: center; justify-content: center; border-radius: 8px; text-decoration: none; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.20); }
+.lang-flag:hover { background: rgba(255,255,255,0.22); }
+.lang-flag:focus { outline: 2px solid rgba(255,255,255,0.85); outline-offset: 2px; }
+.lang-flag.active { background: rgba(255,255,255,0.28); border-color: rgba(255,255,255,0.55); }
+.lang-flag span { font-size: 16px; line-height: 1; }
+
+@media (max-width: 860px) {
+	.docs-layout { grid-template-columns: 1fr; }
+	.docs-aside { position: static; }
+}

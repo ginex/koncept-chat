@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Koncept Chat — Ayuda</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="title-row">
+        <img src="assets/koncept-logo.png" alt="Koncept" class="logo" />
+        <h1>Ayuda</h1>
+      </div>
+      <div class="lang-switch" aria-label="Seleccionar idioma">
+        <a class="lang-flag active" href="help.html" lang="es" hreflang="es" aria-label="Español" title="Español"><span>🇪🇸</span></a>
+        <a class="lang-flag" href="help.fr.html" lang="fr" hreflang="fr" aria-label="Français" title="Français"><span>🇫🇷</span></a>
+        <a class="lang-flag" href="help.en.html" lang="en" hreflang="en" aria-label="English" title="English"><span>🇬🇧</span></a>
+      </div>
+      <p>Documentación del producto para sacar el máximo partido a Koncept Chat.</p>
+      <a class="cta" href="index.html">Volver a la descarga</a>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="docs-layout">
+      <aside class="docs-aside">
+        <div class="docs-card">
+          <h2 class="docs-title">En esta guía</h2>
+          <div class="docs-muted">Consejos, mejores prácticas y resolución de problemas.</div>
+          <ul class="toc">
+            <li><a href="#getting-started">Primeros pasos</a></li>
+            <li><a href="#sources">Fuentes (Documents y Notes)</a></li>
+            <li><a href="#indexing">Indexación: cómo funciona</a></li>
+            <li><a href="#asking">Preguntar mejor (prompts)</a></li>
+            <li><a href="#privacy">Privacidad y seguridad</a></li>
+            <li><a href="#shortcuts">Atajos</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="docs-card">
+          <h2 class="docs-title">Tip rápido</h2>
+          <div class="callout">
+            <b>Mejores respuestas</b> = pregunta concreta + fuentes indexadas.
+          </div>
+        </div>
+      </aside>
+
+      <div class="docs-main">
+        <section id="getting-started">
+          <h2>Primeros pasos <span class="badge">5 min</span></h2>
+          <p>Koncept Chat te permite conversar con tus fuentes personales (documentos y notas). Para que funcione bien, primero hay que <b>iniciar sesión</b> y <b>activar al menos una fuente</b>.</p>
+          <ol class="steps">
+            <li><b>Inicia sesión</b>: pulsa <b>Sign in</b>, escribe tu email y valida el código de 6 dígitos.</li>
+            <li><b>Activa una fuente</b>: abre <b>📄 Documents</b> o <b>📓 Notes</b> desde la app y conecta tu contenido.</li>
+            <li><b>Espera a la indexación</b>: verás contadores junto a Documents/Notes cuando haya contenido disponible.</li>
+            <li><b>Pregunta</b>: escribe en el chat y pulsa <span class="kbd">Enter</span>.</li>
+          </ol>
+        </section>
+
+        <section id="sources">
+          <h2>Fuentes (Documents y Notes)</h2>
+          <p>Koncept separa el contenido en dos tipos de fuentes. Puedes usar una o ambas.</p>
+
+          <h3>📄 Documents</h3>
+          <ul>
+            <li>Conecta una o varias carpetas para sincronizar documentos.</li>
+            <li>Recomendado para PDFs, Word, TXT, Markdown y presentaciones.</li>
+            <li>Buenas prácticas: usa nombres claros, evita duplicados y mantén una estructura de carpetas estable.</li>
+          </ul>
+
+          <h3>📓 Notes</h3>
+          <ul>
+            <li>Crea notas cortas y accionables (reuniones, ideas, decisiones, tareas).</li>
+            <li>Mejor rendimiento cuando cada nota tiene un tema principal y títulos consistentes.</li>
+          </ul>
+
+          <div class="callout">
+            <b>Consejo:</b> si una fuente aparece como “disabled”, normalmente no está activa o no tiene contenido indexado todavía.
+          </div>
+        </section>
+
+        <section id="indexing">
+          <h2>Indexación: cómo funciona</h2>
+          <p>Para poder responder con contexto, Koncept <b>extrae texto</b> de tus fuentes, lo <b>trocea en fragmentos</b> y lo envía al backend para crear un índice de búsqueda semántica.</p>
+          <ul>
+            <li><b>Fragmentos:</b> unidades pequeñas para recuperar solo lo relevante.</li>
+            <li><b>Contadores:</b> indican cuántos items (y su contenido) hay disponibles para consulta.</li>
+            <li><b>Eliminaciones:</b> si borras un documento local, se elimina del índice en la siguiente sincronización.</li>
+          </ul>
+          <p class="docs-muted">Si acabas de añadir documentos, es normal que las respuestas mejoren a medida que termina la indexación.</p>
+        </section>
+
+        <section id="asking">
+          <h2>Preguntar mejor (prompts)</h2>
+          <p>La calidad de la respuesta depende de la pregunta. Aquí tienes patrones que suelen funcionar bien:</p>
+          <ul>
+            <li><b>Resume con formato:</b> “Resume en 6 bullets, con decisiones y próximos pasos”.</li>
+            <li><b>Extrae entidades:</b> “Saca nombres, fechas y acciones pendientes”.</li>
+            <li><b>Comparar:</b> “Compara A vs B y da una recomendación”.</li>
+            <li><b>Buscar evidencia:</b> “Cita el fragmento donde se menciona X y explica su impacto”.</li>
+          </ul>
+          <div class="callout">
+            <b>Plantilla rápida:</b> “Con base en mis fuentes, {tarea}. Responde en {formato}. Si falta información, dime qué documento/nota debería aportar.”
+          </div>
+        </section>
+
+        <section id="privacy">
+          <h2>Privacidad y seguridad</h2>
+          <ul>
+            <li><b>Sesión:</b> si ves “Your session has expired”, vuelve a iniciar sesión.</li>
+            <li><b>Red corporativa:</b> en entornos con proxy/inspección TLS (p. ej. Zscaler), la app usa el truststore de Windows.</li>
+            <li><b>Buenas prácticas:</b> evita indexar secretos innecesarios y separa carpetas personales de las de trabajo.</li>
+          </ul>
+        </section>
+
+        <section id="shortcuts">
+          <h2>Atajos</h2>
+          <ul>
+            <li><span class="kbd">Alt</span> + <span class="kbd">Ctrl</span> + <span class="kbd">K</span> (Windows): mostrar/ocultar Koncept.</li>
+          </ul>
+        </section>
+
+        <section id="troubleshooting">
+          <h2>Troubleshooting</h2>
+          <h3>No conecta o hay errores TLS</h3>
+          <ul>
+            <li>Verifica conexión/VPN y políticas corporativas.</li>
+            <li>En redes con inspección TLS, Koncept confía en los certificados del sistema (Windows).</li>
+          </ul>
+
+          <h3>No aparecen documentos/notas</h3>
+          <ul>
+            <li>Espera al ciclo de sincronización o vuelve a abrir la fuente.</li>
+            <li>Comprueba que la carpeta o el provider están accesibles (antivirus, permisos).</li>
+          </ul>
+
+          <h3>Respuestas pobres o incompletas</h3>
+          <ul>
+            <li>Confirma que hay contenido indexado (contadores no vacíos).</li>
+            <li>Formula la pregunta con más contexto y pide un formato de salida.</li>
+          </ul>
+        </section>
+
+        <section id="faq">
+          <h2>Preguntas frecuentes</h2>
+          <h3>¿Necesito tener Documents y Notes activados?</h3>
+          <p>No. Puedes usar solo una fuente. Con ambas, tendrás más cobertura de contexto.</p>
+
+          <h3>¿Por qué no veo la última versión de un archivo?</h3>
+          <p>La indexación va por ciclos. Tras cambios grandes, espera un poco y vuelve a preguntar.</p>
+
+          <h3>¿Puedo compartir esta ayuda con mi equipo?</h3>
+          <p>Sí. Esta página está pensada para onboarding rápido.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <small>© Koncept - Ginés Sarabia</small>
+  </footer>
+</body>
+</html>

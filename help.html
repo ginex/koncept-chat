@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Koncept Chat — Ayuda</title>
+  <title>Koncept Chat — Help</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -11,37 +11,153 @@
     <div class="hero-inner">
       <div class="title-row">
         <img src="assets/koncept-logo.png" alt="Koncept" class="logo" />
-        <h1>Ayuda</h1>
+        <h1>Help</h1>
       </div>
-      <p>Guía rápida para empezar con Koncept Chat.</p>
-      <a class="cta" href="index.html">Volver</a>
+      <div class="lang-switch" aria-label="Select language">
+        <a class="lang-flag" href="help.es.html" lang="es" hreflang="es" aria-label="Español" title="Español"><span>🇪🇸</span></a>
+        <a class="lang-flag" href="help.fr.html" lang="fr" hreflang="fr" aria-label="Français" title="Français"><span>🇫🇷</span></a>
+        <a class="lang-flag active" href="help.html" lang="en" hreflang="en" aria-label="English" title="English"><span>🇬🇧</span></a>
+      </div>
+      <p>Product documentation to get the most out of Koncept Chat.</p>
+      <a class="cta" href="index.html">Back to download</a>
     </div>
   </header>
 
   <main class="content">
-    <section>
-      <h2>1) Iniciar sesión</h2>
-      <p>Pulsa <b>Sign in</b>, introduce tu email y luego el código de 6 dígitos.</p>
-    </section>
+    <div class="docs-layout">
+      <aside class="docs-aside">
+        <div class="docs-card">
+          <h2 class="docs-title">In this guide</h2>
+          <div class="docs-muted">Tips, best practices, and troubleshooting.</div>
+          <ul class="toc">
+            <li><a href="#getting-started">Getting started</a></li>
+            <li><a href="#sources">Sources (Documents and Notes)</a></li>
+            <li><a href="#indexing">Indexing: how it works</a></li>
+            <li><a href="#asking">Ask better (prompts)</a></li>
+            <li><a href="#privacy">Privacy and security</a></li>
+            <li><a href="#shortcuts">Shortcuts</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
 
-    <section>
-      <h2>2) Conectar tus fuentes</h2>
-      <p>Activa <b>📄 Documents</b> y/o <b>📓 Notes</b> desde la app para indexar tu contenido.</p>
-    </section>
+        <div class="docs-card">
+          <h2 class="docs-title">Quick tip</h2>
+          <div class="callout">
+            <b>Best answers</b> = a specific question + indexed sources.
+          </div>
+        </div>
+      </aside>
 
-    <section>
-      <h2>3) Hacer preguntas</h2>
-      <p>Escribe tu pregunta y pulsa <b>Enter</b>. Cuanto más concreta sea la pregunta, mejores resultados.</p>
-    </section>
+      <div class="docs-main">
+        <section id="getting-started">
+          <h2>Getting started <span class="badge">5 min</span></h2>
+          <p>Koncept Chat lets you chat with your personal sources (documents and notes). For the best experience, first <b>sign in</b> and <b>enable at least one source</b>.</p>
+          <ol class="steps">
+            <li><b>Sign in</b>: click <b>Sign in</b>, enter your email, then confirm the 6‑digit code.</li>
+            <li><b>Enable a source</b>: open <b>📄 Documents</b> or <b>📓 Notes</b> in the app and connect your content.</li>
+            <li><b>Wait for indexing</b>: you’ll see counters next to Documents/Notes once content is available.</li>
+            <li><b>Ask</b>: type in the chat and press <span class="kbd">Enter</span>.</li>
+          </ol>
+        </section>
 
-    <section>
-      <h2>Problemas comunes</h2>
-      <ul>
-        <li><b>Sesión caducada:</b> vuelve a iniciar sesión.</li>
-        <li><b>No conecta en red corporativa (Zscaler):</b> revisa conexión/VPN; la app usa el truststore de Windows.</li>
-        <li><b>No aparecen cambios:</b> espera a la siguiente sincronización o vuelve a abrir la fuente.</li>
-      </ul>
-    </section>
+        <section id="sources">
+          <h2>Sources (Documents and Notes)</h2>
+          <p>Koncept organizes your content into two source types. You can use either one, or both.</p>
+
+          <h3>📄 Documents</h3>
+          <ul>
+            <li>Connect one or more folders to sync documents.</li>
+            <li>Great for PDFs, Word files, TXT, Markdown, and presentations.</li>
+            <li>Best practice: use clear names, avoid duplicates, keep a stable folder structure.</li>
+          </ul>
+
+          <h3>📓 Notes</h3>
+          <ul>
+            <li>Create short, actionable notes (meetings, ideas, decisions, tasks).</li>
+            <li>Works best when each note has one main topic and consistent titles.</li>
+          </ul>
+
+          <div class="callout">
+            <b>Tip:</b> if a source looks “disabled”, it usually isn’t active yet or it has no indexed content.
+          </div>
+        </section>
+
+        <section id="indexing">
+          <h2>Indexing: how it works</h2>
+          <p>To answer with context, Koncept <b>extracts text</b> from your sources, <b>splits it into chunks</b>, and sends it to the backend to build a semantic search index.</p>
+          <ul>
+            <li><b>Chunks:</b> small fragments so retrieval stays precise.</li>
+            <li><b>Counters:</b> show how many items are available to query.</li>
+            <li><b>Deletions:</b> if you delete a local document, it’s removed from the index on the next sync.</li>
+          </ul>
+          <p class="docs-muted">If you just added documents, answers typically improve as indexing finishes.</p>
+        </section>
+
+        <section id="asking">
+          <h2>Ask better (prompts)</h2>
+          <p>Answer quality depends on the question. These patterns often work well:</p>
+          <ul>
+            <li><b>Summaries with structure:</b> “Summarize in 6 bullets with decisions and next steps.”</li>
+            <li><b>Entity extraction:</b> “Extract names, dates, and action items.”</li>
+            <li><b>Compare:</b> “Compare A vs B and recommend an approach.”</li>
+            <li><b>Evidence:</b> “Quote the part where X is mentioned and explain the impact.”</li>
+          </ul>
+          <div class="callout">
+            <b>Quick template:</b> “Based on my sources, {task}. Answer in {format}. If information is missing, tell me what document/note I should provide.”
+          </div>
+        </section>
+
+        <section id="privacy">
+          <h2>Privacy and security</h2>
+          <ul>
+            <li><b>Session:</b> if you see “Your session has expired”, sign in again.</li>
+            <li><b>Corporate networks:</b> in TLS‑inspecting environments (e.g., Zscaler), the app uses the Windows trust store.</li>
+            <li><b>Best practice:</b> avoid indexing unnecessary secrets; separate personal and work folders.</li>
+          </ul>
+        </section>
+
+        <section id="shortcuts">
+          <h2>Shortcuts</h2>
+          <ul>
+            <li><span class="kbd">Alt</span> + <span class="kbd">Ctrl</span> + <span class="kbd">K</span> (Windows): show/hide Koncept.</li>
+          </ul>
+        </section>
+
+        <section id="troubleshooting">
+          <h2>Troubleshooting</h2>
+          <h3>Connection issues / TLS errors</h3>
+          <ul>
+            <li>Check connectivity/VPN and corporate policies.</li>
+            <li>On TLS‑inspecting networks, Koncept trusts system certificates (Windows).</li>
+          </ul>
+
+          <h3>Documents/notes don’t show up</h3>
+          <ul>
+            <li>Wait for the sync cycle, or reopen the source.</li>
+            <li>Make sure folders/providers are accessible (permissions, antivirus).</li>
+          </ul>
+
+          <h3>Weak or incomplete answers</h3>
+          <ul>
+            <li>Confirm content is indexed (counters not empty).</li>
+            <li>Add context and specify the output format you want.</li>
+          </ul>
+        </section>
+
+        <section id="faq">
+          <h2>FAQ</h2>
+          <h3>Do I need both Documents and Notes enabled?</h3>
+          <p>No. You can use just one source. Using both gives better coverage.</p>
+
+          <h3>Why don’t I see the latest version of a file?</h3>
+          <p>Indexing runs in cycles. After big changes, wait a bit and ask again.</p>
+
+          <h3>Can I share this help page with my team?</h3>
+          <p>Yes. This page is designed for quick onboarding.</p>
+        </section>
+      </div>
+    </div>
   </main>
 
   <footer class="footer">
